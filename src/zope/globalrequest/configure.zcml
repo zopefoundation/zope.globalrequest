@@ -4,7 +4,7 @@
 
   <subscriber
     handler=".subscribers.set"
-    for="zope.app.component.interfaces.ISite
+    for="zope.traversing.interfaces.IContainmentRoot
          zope.app.publication.interfaces.IBeforeTraverseEvent"
     trusted="y" />
 
