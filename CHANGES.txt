@@ -1,8 +1,12 @@
 Changelog
 =========
 
-1.0a1 - Unreleased
+1.0a2 - Unreleased
 ------------------
+
+
+1.0a1 - Released January 15, 2009
+---------------------------------
 
 * Initial release
   [witsch]

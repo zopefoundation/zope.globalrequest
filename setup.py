@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 from os.path import join
 
-version = '1.0a1'
+version = '1.0a2'
 readme = open(join('src', 'zope', 'globalrequest', 'README.txt')).read()
 history = open('CHANGES.txt').read()
 
