@@ -1,1 +1,5 @@
-# the existance of __init__.py make this a module...
+from zope.interface.declarations import moduleProvides
+from zope.globalrequest.interfaces import IGlobalRequest
+
+moduleProvides(IGlobalRequest)
+
