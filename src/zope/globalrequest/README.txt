@@ -7,13 +7,11 @@ Introduction
 This package provides a global way to retrieve the currently active request
 object in a zope-based web framework.
 
-Let's just check the interfaces for now:
 
-  >>> from zope.globalrequest.interfaces import IGlobalRequest
-  >>> IGlobalRequest
-  <InterfaceClass zope.globalrequest.interfaces.IGlobalRequest>
+Functional Tests
+----------------
 
-Also make sure our test view works:
+First we make sure our test view works:
 
   >>> from zope.testbrowser.testing import Browser
   >>> browser = Browser()
