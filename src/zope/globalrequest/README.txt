@@ -5,11 +5,18 @@ Introduction
 ------------
 
 This package provides a global way to retrieve the currently active request
-object in a zope-based web framework.
+object in a zope-based web framework.  To do so you simply need to do the
+following::
+
+  from zope.globalrequest import getRequest
+  request = getRequest()
 
 
 Functional Tests
 ----------------
+
+The remainder of this file contains functional tests to demonstrate that the
+package works as intended.
 
 First we make sure our test view works:
 
