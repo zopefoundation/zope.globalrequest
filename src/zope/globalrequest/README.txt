@@ -13,9 +13,11 @@ Let's just check the interfaces for now:
   >>> IGlobalRequest
   <InterfaceClass zope.globalrequest.interfaces.IGlobalRequest>
 
+Also make sure our test view works:
+
   >>> from zope.testbrowser.testing import Browser
   >>> browser = Browser()
-  >>> browser.open('http://localhost/')
-  >>> browser.isHtml
-  True
+  >>> browser.open('http://localhost/@@foo')
+  >>> browser.contents
+  'sif!'
 

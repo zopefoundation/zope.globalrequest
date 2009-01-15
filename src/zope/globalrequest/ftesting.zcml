@@ -25,4 +25,11 @@
   <grant permission="zope.View"
       role="zope.Anonymous" />
 
+  <browser:page
+     name="foo"
+     for="*"
+     class=".ftests.FooView"
+     permission="zope.Public"
+     />
+
 </configure>
