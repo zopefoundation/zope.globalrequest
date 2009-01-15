@@ -79,3 +79,8 @@ If we now provide a request value we should be greeted properly:
   >>> browser.contents
   'y0 d4wg!!'
 
+Once the request has been processed, it should not be available anymore:
+
+  >>> print getRequest()
+  None
+
