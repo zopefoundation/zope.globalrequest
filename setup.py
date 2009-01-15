@@ -37,6 +37,7 @@ setup(name = 'zope.globalrequest',
       extras_require = dict(
           test = [
               'zope.testing',
+              'zope.configuration',
               'zope.app.publisher',
               'zope.app.securitypolicy',
               'zope.testbrowser',
