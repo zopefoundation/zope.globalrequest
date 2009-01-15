@@ -1,7 +1,8 @@
 from setuptools import setup, find_packages
+from os.path import join
 
 version = '1.0a1'
-readme = open('README.txt').read()
+readme = open(join('src', 'zope', 'globalrequest', 'README.txt')).read()
 history = open('CHANGES.txt').read()
 
 setup(name = 'zope.globalrequest',
@@ -33,7 +34,10 @@ setup(name = 'zope.globalrequest',
       install_requires = [
           'setuptools',
       ],
-      tests_require = [
-      ],
+      extras_require = dict(
+          test = [
+              'zope.testing',
+          ],
+      ),
       entry_points = '',
 )
