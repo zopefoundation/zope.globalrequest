@@ -18,7 +18,45 @@ Functional Tests
 The remainder of this file contains functional tests to demonstrate that the
 package works as intended.
 
-First we make sure our test view works:
+First we need to define a browser view along with an interface for a utility
+that will be used by that view:
+
+  >>> from zope.interface import Interface
+  >>> class IFoo(Interface):
+  ...     """ interface for a foo-ish utility """
+  ...     def foo():
+  ...         """ return some foo """
+
+  >>> from zope.publisher.browser import BrowserPage
+  >>> from zope.component import queryUtility
+  >>> class FooView(BrowserPage):
+  ...    """ a browser view """
+  ...    def __call__(self, *args, **kw):
+  ...        foo = queryUtility(IFoo, default=None)
+  ...        if foo is not None:
+  ...            return foo.foo()
+  ...        else:
+  ...            return 'sif!'
+
+Unfortunately the view class cannot be directly imported from here, i.e.
+relatively, so we have to make it available from somewhere else in order to register it:
+
+  >>> from zope.globalrequest import tests
+  >>> tests.FooView = FooView
+  >>> zcml("""
+  ... <configure
+  ...     xmlns="http://namespaces.zope.org/zope"
+  ...     xmlns:browser="http://namespaces.zope.org/browser">
+  ...   <include package="zope.app.publisher" file="meta.zcml" />
+  ...   <browser:page
+  ...     name="foo"
+  ...     for="*"
+  ...     class="zope.globalrequest.tests.FooView"
+  ...     permission="zope.Public" />
+  ... </configure>
+  ... """)
+
+Next let's make sure our test view actually works:
 
   >>> from zope.testbrowser.testing import Browser
   >>> browser = Browser()
@@ -30,10 +68,9 @@ The view tries to query for a utility and use it to "calculate" it's response,
 so let's define one:
 
   >>> from zope.interface import implements
-  >>> from zope.globalrequest import ftests
   >>> from zope.globalrequest import getRequest
   >>> class Foo(object):
-  ...     implements(ftests.IFoo)
+  ...     implements(IFoo)
   ...     def foo(self):
   ...         request = getRequest()
   ...         if request:
@@ -42,17 +79,18 @@ so let's define one:
   ...             name = 'foo'
   ...         return 'y0 %s!' % name
 
-Unfortunately the utility class cannot be directly imported from here, i.e.
-relatively, so we have to make it available from somewhere else to register
-the utility:
+Again, the utility class and interface cannot be directly imported from here,
+so let's also make them available from somewhere else in order to register
+utility:
 
-  >>> ftests.Foo = Foo
+  >>> tests.Foo = Foo
+  >>> tests.IFoo = IFoo
   >>> zcml("""
   ... <configure xmlns="http://namespaces.zope.org/zope">
   ...   <include package="zope.component" file="meta.zcml" />
   ...   <utility
-  ...     factory="zope.globalrequest.ftests.Foo"
-  ...     provides="zope.globalrequest.ftests.IFoo" />
+  ...     factory="zope.globalrequest.tests.Foo"
+  ...     provides="zope.globalrequest.tests.IFoo" />
   ... </configure>
   ... """)
 
