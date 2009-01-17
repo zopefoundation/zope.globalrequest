@@ -12,6 +12,8 @@ setup(name = 'zope.globalrequest',
       classifiers = [
         'Development Status :: 3 - Alpha',
         'Environment :: Web Environment',
+        'Framework :: Plone',
+        'Framework :: Zope2',
         'Intended Audience :: Developers',
         'Intended Audience :: System Administrators',
         'Intended Audience :: Other Audience',
