@@ -1,8 +1,8 @@
 Changelog
 =========
 
-1.0a2 - Unreleased
-------------------
+1.0a2 - Released January 17, 2009
+---------------------------------
 
 * Update documentation to clarify the intentions of this package.  Also see
   http://thread.gmane.org/gmane.comp.web.zope.devel/18023 for more information.
