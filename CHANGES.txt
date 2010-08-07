@@ -1,8 +1,11 @@
 Changelog
 =========
 
-1.0a3 - Unreleased
-------------------
+1.0 - Released August 7, 2010
+-----------------------------
+
+* Fix test setup regarding `zope.securitypolicy`.
+  [ldr]
 
 
 1.0a2 - Released January 17, 2009
