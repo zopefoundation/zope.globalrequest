@@ -1,28 +1,27 @@
 Changelog
 =========
 
-1.1 - Unreleased
-------------------
+1.1 (unreleased)
+----------------
 
 
-1.0 - Released August 7, 2010
------------------------------
+1.0 (2010-08-07)
+----------------
 
 * Fix test setup regarding `zope.securitypolicy`.
   [ldr]
 
 
-1.0a2 - Released January 17, 2009
----------------------------------
+1.0a2 (2009-01-17)
+------------------
 
 * Update documentation to clarify the intentions of this package.  Also see
   http://thread.gmane.org/gmane.comp.web.zope.devel/18023 for more information.
   [witsch]
 
 
-1.0a1 - Released January 15, 2009
----------------------------------
+1.0a1 (2009-01-15)
+------------------
 
 * Initial release
   [witsch]
-
