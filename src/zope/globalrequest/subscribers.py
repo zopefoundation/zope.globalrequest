@@ -1,4 +1,5 @@
-from zope.globalrequest import setRequest, clearRequest
+from zope.globalrequest import clearRequest
+from zope.globalrequest import setRequest
 
 
 def set(context, event):

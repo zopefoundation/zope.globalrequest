@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 from os.path import join
 
-__version__ = '1.1'
+__version__ = '1.1.dev0'
 
 readme = open(join('src', 'zope', 'globalrequest', 'README.rst')).read()
 changes = open('CHANGES.rst').read()
@@ -36,16 +36,20 @@ setup(
     zip_safe=False,
     install_requires=[
         'setuptools',
+        'zope.interface',
+        'zope.publisher',
+        'zope.traversing',
     ],
     extras_require=dict(
         test=[
-            'zope.testing',
-            'zope.configuration',
+            'zope.app.authentication',
             'zope.app.publisher',
-            'zope.app.securitypolicy',
             'zope.app.testing',
             'zope.app.zcmlfiles',
+            'zope.configuration',
+            'zope.securitypolicy',
             'zope.testbrowser',
+            'zope.testing',
         ],
     ),
 )
