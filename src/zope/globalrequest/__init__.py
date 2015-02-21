@@ -4,7 +4,8 @@ from zope.globalrequest.interfaces import IGlobalRequest
 moduleProvides(IGlobalRequest)
 
 
-from zope.globalrequest.local import getLocal, setLocal
+from zope.globalrequest.local import getLocal
+from zope.globalrequest.local import setLocal
 
 
 def getRequest():
@@ -20,4 +21,3 @@ def setRequest(request):
 def clearRequest():
     """ clear the stored request object """
     setRequest(None)
-

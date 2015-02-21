@@ -5,6 +5,7 @@ from threading import local
 localData = local()
 marker = []
 
+
 # helper functions to get/set local values or optionally initialize them
 def getLocal(name, factory=lambda: None):
     value = getattr(localData, name, marker)
@@ -13,6 +14,6 @@ def getLocal(name, factory=lambda: None):
         setLocal(name, value)
     return value
 
+
 def setLocal(name, value):
     setattr(localData, name, value)
-

@@ -3,7 +3,7 @@ from os.path import join
 
 __version__ = '1.1'
 
-readme = open(join('src', 'zope', 'globalrequest', 'README.txt')).read()
+readme = open(join('src', 'zope', 'globalrequest', 'README.rst')).read()
 changes = open('CHANGES.rst').read()
 
 setup(

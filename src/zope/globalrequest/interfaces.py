@@ -13,4 +13,3 @@ class IGlobalRequest(Interface):
 
     def clearRequest():
         """ clear the stored request object """
-

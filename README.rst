@@ -1,1 +1,1 @@
-Please refer to src/zope/globalrequest/README.txt.
+Please refer to src/zope/globalrequest/README.rst.

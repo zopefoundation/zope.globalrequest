@@ -12,6 +12,7 @@ def zcml(source):
     xmlconfig.registerCommonDirectives(context)
     xmlconfig.string(source, context)
 
+
 def tearDown(test):
     cleanUp()
 
@@ -19,11 +20,15 @@ testLayer = functional.ZCMLLayer(
     join(abspath(dirname(__file__)), 'ftesting.zcml'),
     __name__, 'TestBrowserLayer', allow_teardown=True)
 
+
 def test_suite():
     flags = doctest.NORMALIZE_WHITESPACE | doctest.ELLIPSIS
-    readme = functional.FunctionalDocFileSuite('README.txt',
-        package='zope.globalrequest', globs={'zcml': zcml},
-        optionflags=flags, tearDown=tearDown)
+    readme = functional.FunctionalDocFileSuite(
+        'README.rst',
+        package='zope.globalrequest',
+        globs={
+            'zcml': zcml},
+        optionflags=flags,
+        tearDown=tearDown)
     readme.layer = testLayer
     return TestSuite((readme,))
-

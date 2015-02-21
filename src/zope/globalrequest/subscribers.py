@@ -9,4 +9,3 @@ def set(context, event):
 def clear(event):
     """ clear the stored request object """
     clearRequest()
-
