@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.1 (unreleased)
+1.1 (2015-04-29)
 ----------------
 
 - Fix import locations and declare all dependencies.
