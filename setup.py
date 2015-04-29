@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 from os.path import join
 
-version = '1.1'
+version = '1.2.dev0'
 
 readme = open(join('src', 'zope', 'globalrequest', 'README.rst')).read()
 changes = open('CHANGES.rst').read()
