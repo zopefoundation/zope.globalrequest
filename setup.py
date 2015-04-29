@@ -1,14 +1,14 @@
 from setuptools import setup, find_packages
 from os.path import join
 
-__version__ = '1.1.dev0'
+version = '1.1.dev0'
 
 readme = open(join('src', 'zope', 'globalrequest', 'README.rst')).read()
 changes = open('CHANGES.rst').read()
 
 setup(
     name='zope.globalrequest',
-    version=__version__,
+    version=version,
     description='Global way of retrieving the currently active request.',
     long_description=readme[readme.find('\n\n'):] + '\n' + changes,
     classifiers=[
