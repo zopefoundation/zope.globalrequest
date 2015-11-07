@@ -1,5 +1,5 @@
+import doctest
 from unittest import TestSuite
-from zope.testing import doctest
 from zope.testing.cleanup import cleanUp
 from zope.configuration import config
 from zope.configuration import xmlconfig
