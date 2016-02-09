@@ -26,7 +26,7 @@ setup(
     keywords='zope request global',
     author='Zope Foundation and Contributors',
     author_email='zope-dev@zope.org',
-    url='http://pypi.python.org/pypi/zope.globalrequest',
+    url='https://pypi.python.org/pypi/zope.globalrequest',
     license='ZPL',
     packages=find_packages('src'),
     package_dir={'': 'src'},
