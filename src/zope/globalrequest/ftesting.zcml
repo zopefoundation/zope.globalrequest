@@ -6,22 +6,15 @@
   <!-- This file is the equivalent of site.zcml and it is -->
   <!-- used for functional testing setup -->
 
-  <include package="zope.app.zcmlfiles" />
-  <include package="zope.app.authentication" />
-
-  <unauthenticatedPrincipal
-      id="zope.anybody"
-      title="Unauthenticated User" />
-
-  <include package="zope.securitypolicy" file="meta.zcml"/>
-
-  <securityPolicy
-      component="zope.securitypolicy.zopepolicy.ZopeSecurityPolicy" />
-
-  <role id="zope.Anonymous" title="Everybody"
-      description="All users have this role implicitly" />
-
-  <grant permission="zope.View"
-      role="zope.Anonymous" />
+  <include package="zope.component" file="meta.zcml" />
+  <include package="zope.browserpage" file="meta.zcml" />
+  <include package="zope.app.publication" file="meta.zcml" />
+  <include package="zope.app.appsetup" />
+  <include package="zope.container" />
+  <include package="zope.principalregistry" />
+  <include package="zope.component" />
+  <include package="zope.traversing" />
+  <include package="zope.publisher" />
+  <include package="zope.app.publication" />
 
 </configure>

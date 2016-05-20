@@ -1,10 +1,10 @@
-import doctest
 from unittest import TestSuite
-from zope.testing.cleanup import cleanUp
 from zope.configuration import config
 from zope.configuration import xmlconfig
-from zope.app.testing import functional
-from os.path import join, abspath, dirname
+from zope.testing.cleanup import cleanUp
+import doctest
+import zope.app.wsgi.testlayer
+import zope.globalrequest
 
 
 def zcml(source):
@@ -16,14 +16,12 @@ def zcml(source):
 def tearDown(test):
     cleanUp()
 
-testLayer = functional.ZCMLLayer(
-    join(abspath(dirname(__file__)), 'ftesting.zcml'),
-    __name__, 'TestBrowserLayer', allow_teardown=True)
+testLayer = zope.app.wsgi.testlayer.BrowserLayer(zope.globalrequest)
 
 
 def test_suite():
     flags = doctest.NORMALIZE_WHITESPACE | doctest.ELLIPSIS
-    readme = functional.FunctionalDocFileSuite(
+    readme = doctest.DocFileSuite(
         'README.rst',
         package='zope.globalrequest',
         globs={

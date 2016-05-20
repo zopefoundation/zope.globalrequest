@@ -42,12 +42,10 @@ setup(
     ],
     extras_require=dict(
         test=[
-            'zope.app.authentication',
             'zope.app.publisher',
-            'zope.app.testing',
-            'zope.app.zcmlfiles',
+            'zope.app.wsgi',
             'zope.configuration',
-            'zope.securitypolicy',
+            'zope.principalregistry',
             'zope.testbrowser',
             'zope.testing',
         ],

@@ -63,7 +63,7 @@ relatively, so we have to make it available from somewhere else in order to regi
 
 Next let's make sure our test view actually works:
 
-  >>> from zope.testbrowser.testing import Browser
+  >>> from zope.testbrowser.wsgi import Browser
   >>> browser = Browser()
   >>> browser.open('http://localhost/@@foo')
   >>> browser.contents

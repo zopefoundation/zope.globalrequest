@@ -4,7 +4,8 @@ Changelog
 1.2 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Lighten test dependencies by using neither `zope.app.testing` nor
+  `zope.app.zcmlfiles` any longer.
 
 
 1.1 (2015-04-29)
