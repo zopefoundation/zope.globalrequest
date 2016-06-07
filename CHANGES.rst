@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.2 (unreleased)
+1.2 (2016-06-07)
 ----------------
 
 - Lighten test dependencies by using neither `zope.app.testing` nor
