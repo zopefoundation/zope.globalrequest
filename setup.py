@@ -22,6 +22,7 @@ setup(
         'License :: OSI Approved :: Zope Public License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
+        'Programming Language :: Python :: 2.7',
     ],
     keywords='zope request global',
     author='Zope Foundation and Contributors',
