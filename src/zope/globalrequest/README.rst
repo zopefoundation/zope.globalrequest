@@ -65,7 +65,6 @@ Next let's make sure our test view actually works:
 
   >>> from zope.testbrowser.wsgi import Browser
   >>> browser = Browser(wsgi_app=layer.make_wsgi_app())
-  >>> browser.handleErrors = False
   >>> browser.open('http://localhost/@@foo')
   >>> browser.contents
   'sif!'
