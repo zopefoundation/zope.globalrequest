@@ -44,7 +44,7 @@ setup(
     extras_require=dict(
         test=[
             'zope.app.publisher',
-            'zope.app.wsgi<4.0',
+            'zope.app.wsgi',
             'zope.configuration',
             'zope.principalregistry',
             'zope.testbrowser',
