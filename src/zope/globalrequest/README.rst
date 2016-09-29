@@ -64,7 +64,7 @@ relatively, so we have to make it available from somewhere else in order to regi
 Next let's make sure our test view actually works:
 
   >>> from zope.testbrowser.wsgi import Browser
-  >>> browser = Browser(wsgi_app=layer.make_wsgi_app())
+  >>> browser = Browser()
   >>> browser.open('http://localhost/@@foo')
   >>> browser.contents
   'sif!'
