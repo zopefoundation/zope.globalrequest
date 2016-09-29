@@ -4,7 +4,6 @@ from zope.configuration import xmlconfig
 from zope.testing.cleanup import cleanUp
 import doctest
 import zope.app.wsgi.testlayer
-import zope.testbrowser.wsgi
 import zope.globalrequest
 
 
@@ -18,16 +17,8 @@ def tearDown(test):
     cleanUp()
 
 
-#class WSGILayer(zope.app.wsgi.testlayer.BrowserLayer,
-#    zope.testbrowser.wsgi.Layer):
-
-#    def make_wsgi_app(self):
-#        return super(WSGILayer, self).make_wsgi_app()
-
-
 testLayer = zope.app.wsgi.testlayer.BrowserLayer(zope.globalrequest)
 
-#zope.testbrowser.wsgi._APP_UNDER_TEST = testLayer.make_wsgi_app()
 
 def test_suite():
     flags = doctest.NORMALIZE_WHITESPACE | doctest.ELLIPSIS

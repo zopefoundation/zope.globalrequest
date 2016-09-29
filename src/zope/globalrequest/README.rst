@@ -82,7 +82,6 @@ so let's define one:
   ...             name = 'foo'
   ...         return 'y0 %s!' % name
 
-
 Again, the utility class and interface cannot be directly imported from here,
 so let's also make them available from somewhere else in order to register
 utility:
