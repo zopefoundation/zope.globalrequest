@@ -18,9 +18,9 @@ def tearDown(test):
     cleanUp()
 
 
-class Layer(zope.testbrowser.wsgi.WSGILayer,
+class Layer(zope.testbrowser.wsgi.TestBrowserLayer,
             zope.app.wsgi.testlayer.BrowserLayer):
-    """Layer to set up WSGI App and prepare zope.testbrowser."""
+    """Layer to prepare zope.testbrowser using the WSGI app."""
 
 testLayer = Layer(zope.globalrequest)
 
