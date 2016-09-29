@@ -52,7 +52,7 @@ relatively, so we have to make it available from somewhere else in order to regi
   ... <configure
   ...     xmlns="http://namespaces.zope.org/zope"
   ...     xmlns:browser="http://namespaces.zope.org/browser">
-  ...   <include package="zope.app.publisher" file="meta.zcml" />
+  ...   <include package="zope.browserpage" file="meta.zcml" />
   ...   <browser:page
   ...     name="foo"
   ...     for="*"

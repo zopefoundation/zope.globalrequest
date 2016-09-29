@@ -43,11 +43,11 @@ setup(
     ],
     extras_require=dict(
         test=[
-            'zope.app.publisher',
+            'zope.browserpage',
             'zope.app.wsgi',
             'zope.configuration',
             'zope.principalregistry',
-            'zope.testbrowser',
+            'zope.testbrowser>=5.0.0.dev0',
             'zope.testing',
         ],
     ),
