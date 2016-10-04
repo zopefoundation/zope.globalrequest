@@ -47,7 +47,7 @@ setup(
             'zope.app.wsgi',
             'zope.configuration',
             'zope.principalregistry',
-            'zope.testbrowser>=5.0.0.dev0',
+            'zope.testbrowser>=5.0',
             'zope.testing',
         ],
     ),
