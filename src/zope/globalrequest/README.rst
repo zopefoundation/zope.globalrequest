@@ -52,7 +52,7 @@ relatively, so we have to make it available from somewhere else in order to regi
   ... <configure
   ...     xmlns="http://namespaces.zope.org/zope"
   ...     xmlns:browser="http://namespaces.zope.org/browser">
-  ...   <include package="zope.app.publisher" file="meta.zcml" />
+  ...   <include package="zope.browserpage" file="meta.zcml" />
   ...   <browser:page
   ...     name="foo"
   ...     for="*"
@@ -72,10 +72,8 @@ Next let's make sure our test view actually works:
 The view tries to query for a utility and use it to "calculate" it's response,
 so let's define one:
 
-  >>> from zope.interface import implements
   >>> from zope.globalrequest import getRequest
   >>> class Foo(object):
-  ...     implements(IFoo)
   ...     def foo(self):
   ...         request = getRequest()
   ...         if request:
@@ -131,6 +129,6 @@ If we now provide a request value we should be greeted properly:
 
 Once the request has been processed, it should not be available anymore:
 
-  >>> print getRequest()
+  >>> print(getRequest())
   None
-
+  

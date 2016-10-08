@@ -5,6 +5,7 @@ from zope.testing.cleanup import cleanUp
 import doctest
 import zope.app.wsgi.testlayer
 import zope.globalrequest
+import zope.testbrowser.wsgi
 
 
 def zcml(source):
@@ -16,7 +17,12 @@ def zcml(source):
 def tearDown(test):
     cleanUp()
 
-testLayer = zope.app.wsgi.testlayer.BrowserLayer(zope.globalrequest)
+
+class Layer(zope.testbrowser.wsgi.TestBrowserLayer,
+            zope.app.wsgi.testlayer.BrowserLayer):
+    """Layer to prepare zope.testbrowser using the WSGI app."""
+
+testLayer = Layer(zope.globalrequest)
 
 
 def test_suite():
@@ -24,8 +30,7 @@ def test_suite():
     readme = doctest.DocFileSuite(
         'README.rst',
         package='zope.globalrequest',
-        globs={
-            'zcml': zcml},
+        globs={'zcml': zcml},
         optionflags=flags,
         tearDown=tearDown)
     readme.layer = testLayer

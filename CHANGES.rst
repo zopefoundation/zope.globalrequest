@@ -4,7 +4,7 @@ Changelog
 1.3 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Python 3 compatibility.
 
 
 1.2 (2016-06-07)
