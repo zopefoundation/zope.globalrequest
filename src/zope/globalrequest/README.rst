@@ -131,4 +131,3 @@ Once the request has been processed, it should not be available anymore:
 
   >>> print(getRequest())
   None
-  
