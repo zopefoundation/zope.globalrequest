@@ -1,11 +1,11 @@
-from zope.interface.declarations import moduleProvides
+# -*- coding: utf-8 -*-
 from zope.globalrequest.interfaces import IGlobalRequest
-
-moduleProvides(IGlobalRequest)
-
-
 from zope.globalrequest.local import getLocal
 from zope.globalrequest.local import setLocal
+from zope.globalrequest.local import marker
+from zope.interface.declarations import moduleProvides
+
+moduleProvides(IGlobalRequest)
 
 
 def getRequest():
@@ -20,4 +20,4 @@ def setRequest(request):
 
 def clearRequest():
     """ clear the stored request object """
-    setRequest(None)
+    setRequest(marker)

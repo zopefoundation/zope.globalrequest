@@ -1,9 +1,9 @@
+# -*- coding: utf-8 -*-
 from setuptools import setup, find_packages
-from os.path import join
 
 version = '1.3.1.dev0'
 
-readme = open(join('src', 'zope', 'globalrequest', 'README.rst')).read()
+readme = open('README.rst').read()
 changes = open('CHANGES.rst').read()
 
 setup(
@@ -25,9 +25,9 @@ setup(
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
     ],
     keywords='zope request global',
     author='Zope Foundation and Contributors',
@@ -47,13 +47,7 @@ setup(
         'zope.traversing',
     ],
     extras_require=dict(
-        test=[
-            'zope.browserpage',
-            'zope.app.wsgi',
-            'zope.configuration',
-            'zope.principalregistry',
-            'zope.testbrowser>=5.0',
-            'zope.testing',
+        test=[  # keep empty in case someone uses it
         ],
     ),
 )
