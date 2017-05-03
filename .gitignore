@@ -3,6 +3,7 @@ build
 develop-eggs
 dist
 lib
+local
 include
 man
 parts

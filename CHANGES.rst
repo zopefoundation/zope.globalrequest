@@ -4,7 +4,8 @@ Changelog
 1.3.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Turn fucntional tests into better covering unit tests and also add more tests.
+  This removes test dependencies on unrelated packages.
 
 
 1.3 (2016-10-22)
