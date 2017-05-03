@@ -4,7 +4,7 @@ Changelog
 1.3.1 (unreleased)
 ------------------
 
-- Turn fucntional tests into better covering unit tests and also add more tests.
+- Turn functional tests into better covering unit tests and also add more tests.
   This removes test dependencies on unrelated packages.
 
 

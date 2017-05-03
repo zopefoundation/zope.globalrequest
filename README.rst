@@ -4,7 +4,7 @@ zope.globalrequest
 Introduction
 ------------
 
-This package provides a global way to retrieve the currently active request object in a zope-based web framework.
+This package provides a contextless way to retrieve the currently active request object in a zope-based web framework.
 To do so you simply need to do the following::
 
     from zope.globalrequest import getRequest
