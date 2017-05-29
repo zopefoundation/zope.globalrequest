@@ -1,8 +1,8 @@
 Changelog
 =========
 
-1.3.1 (unreleased)
-------------------
+1.4 (2017-05-29)
+----------------
 
 - Turn functional tests into better covering unit tests and also add more tests.
   This removes test dependencies on unrelated packages.
