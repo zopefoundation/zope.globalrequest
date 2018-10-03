@@ -4,7 +4,7 @@ Changelog
 1.5 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Added support for Python 3.7.
 
 
 1.4 (2017-05-29)
