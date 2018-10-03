@@ -13,6 +13,9 @@ matrix:
 install:
     - pip install coveralls coverage
     - pip install tox-travis
+    - pip install zc.buildout
+    - buildout bootstrap
+    - buildout
 script:
     - coverage run bin/test
 after_success:
