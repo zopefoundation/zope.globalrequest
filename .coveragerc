@@ -1,0 +1,6 @@
+[run]
+branch = True
+source = src/zope/globalrequest
+
+[report]
+precision = 2
