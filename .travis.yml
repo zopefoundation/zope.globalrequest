@@ -14,6 +14,7 @@ matrix:
 install:
     - pip install coveralls coverage
     - pip install tox-travis
+    - pip install zope.testrunner
     - pip install -U -e .[test]
 script:
     - coverage run -m zope.testrunner --test-path=src
