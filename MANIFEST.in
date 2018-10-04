@@ -1,5 +1,6 @@
 include *.rst
 include *.txt
+include .coveragerc
 
 recursive-include src *
 
