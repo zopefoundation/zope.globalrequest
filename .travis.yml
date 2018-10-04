@@ -13,7 +13,6 @@ matrix:
           sudo: true
 install:
     - pip install coveralls coverage
-    - pip install tox-travis
     - pip install zope.testrunner
     - pip install -U -e .[test]
 script:
