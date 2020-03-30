@@ -85,7 +85,7 @@ class TestGlobalrequest(unittest.TestCase):
 
         # test clear
         zope.globalrequest.subscribers.set(None, dummy_event)
-        zope.globalrequest.subscribers.clearRequest()
+        zope.globalrequest.subscribers.clear(dummy_event)
         self.assertIs(zope.globalrequest.getRequest(), None)
 
 

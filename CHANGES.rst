@@ -4,7 +4,9 @@ Changelog
 1.6 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Add support for Python 3.8.
+
+- Drop support for Python 3.4.
 
 
 1.5 (2018-10-04)
