@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
+from zope.interface.declarations import moduleProvides
+
 from zope.globalrequest.interfaces import IGlobalRequest
 from zope.globalrequest.local import getLocal
-from zope.globalrequest.local import setLocal
 from zope.globalrequest.local import marker
-from zope.interface.declarations import moduleProvides
+from zope.globalrequest.local import setLocal
+
 
 moduleProvides(IGlobalRequest)
 

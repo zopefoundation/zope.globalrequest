@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
-from setuptools import setup, find_packages
+from setuptools import find_packages
+from setuptools import setup
+
 
 version = '1.6.dev0'
 
@@ -32,6 +34,7 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
         'Programming Language :: Python :: Implementation :: CPython',
     ],
     keywords='zope request global',
@@ -58,7 +61,6 @@ setup(
         'zope.traversing',
     ],
     extras_require=dict(
-        test=[  # keep empty in case someone uses it
-        ],
+        test=['zope.testrunner'],
     ),
 )

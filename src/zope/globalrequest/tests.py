@@ -7,6 +7,7 @@ class TestGlobalrequest(unittest.TestCase):
     def tearDown(self):
         # reset the threading local context
         from threading import local
+
         import zope.globalrequest.local
         zope.globalrequest.local.localData = local()
 
