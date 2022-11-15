@@ -4,6 +4,8 @@ Changelog
 1.7 (unreleased)
 ----------------
 
+- Mention Python 3.11 support in trove classifiers.
+
 
 1.6 (2022-10-18)
 ----------------
