@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import unittest
 
 
@@ -66,7 +65,7 @@ class TestGlobalrequest(unittest.TestCase):
         import zope.globalrequest.subscribers
         test_request = dict(value='I am a dummy request')
 
-        class DummyEvent(object):
+        class DummyEvent:
             request = test_request
 
         dummy_event = DummyEvent()
@@ -79,7 +78,7 @@ class TestGlobalrequest(unittest.TestCase):
         import zope.globalrequest.subscribers
         test_request = dict(value='I am a dummy request')
 
-        class DummyEvent(object):
+        class DummyEvent:
             request = test_request
 
         dummy_event = DummyEvent()

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from zope.interface.declarations import moduleProvides
 
 from zope.globalrequest.interfaces import IGlobalRequest
