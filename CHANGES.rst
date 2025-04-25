@@ -4,7 +4,7 @@ Changelog
 2.1 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Drop support for Python 3.7, 3.8.
 
 
 2.0 (2023-03-27)
