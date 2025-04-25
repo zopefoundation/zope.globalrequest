@@ -13,7 +13,7 @@ class TestGlobalrequest(unittest.TestCase):
     def test_unset_local(self):
         # test with unset values
         import zope.globalrequest.local
-        self.assertIs(zope.globalrequest.local.getLocal('unsetkey'), None)
+        self.assertIsNone(zope.globalrequest.local.getLocal('unsetkey'))
 
     def test_set_get_local(self):
         # test with simple values
@@ -44,7 +44,7 @@ class TestGlobalrequest(unittest.TestCase):
     def test_unset_global_request(self):
         # get w/o any value set returns None
         import zope.globalrequest
-        self.assertIs(zope.globalrequest.getRequest(), None)
+        self.assertIsNone(zope.globalrequest.getRequest())
 
     def test_set_get_globalrequest(self):
         # set a value and get it back
@@ -59,7 +59,7 @@ class TestGlobalrequest(unittest.TestCase):
         test_request = dict(value='I am a dummy request')
         zope.globalrequest.setRequest(test_request)
         zope.globalrequest.clearRequest()
-        self.assertIs(zope.globalrequest.getRequest(), None)
+        self.assertIsNone(zope.globalrequest.getRequest())
 
     def test_set_subscriber(self):
         import zope.globalrequest.subscribers
@@ -86,7 +86,7 @@ class TestGlobalrequest(unittest.TestCase):
         # test clear
         zope.globalrequest.subscribers.set(None, dummy_event)
         zope.globalrequest.subscribers.clear(dummy_event)
-        self.assertIs(zope.globalrequest.getRequest(), None)
+        self.assertIsNone(zope.globalrequest.getRequest())
 
 
 def test_suite():
