@@ -1,7 +1,7 @@
 from setuptools import setup
 
 
-version = '3.0'
+version = '3.1.dev0'
 
 readme = open('README.rst').read()
 changes = open('CHANGES.rst').read()
