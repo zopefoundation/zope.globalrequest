@@ -1,8 +1,7 @@
-from setuptools import find_packages
 from setuptools import setup
 
 
-version = '2.2.dev0'
+version = '3.0.dev0'
 
 readme = open('README.rst').read()
 changes = open('CHANGES.rst').read()
@@ -42,9 +41,6 @@ setup(
         'Sources': 'https://github.com/zopefoundation/zope.globalrequest',
     },
     license='ZPL',
-    packages=find_packages('src'),
-    package_dir={'': 'src'},
-    namespace_packages=['zope'],
     include_package_data=True,
     platforms='Any',
     zip_safe=False,
@@ -56,6 +52,6 @@ setup(
         'zope.traversing',
     ],
     extras_require=dict(
-        test=['zope.testrunner'],
+        test=['zope.testrunner >= 6.4'],
     ),
 )
