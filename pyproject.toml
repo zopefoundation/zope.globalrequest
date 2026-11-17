@@ -41,7 +41,6 @@ maintainers = [
     {name = "Plone Foundation and contributors",email = "zope-dev@zope.dev"},
 ]
 dependencies = [
-    "setuptools",
     "zope.interface",
     "zope.publisher",
     "zope.traversing",
