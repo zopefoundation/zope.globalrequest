@@ -4,7 +4,7 @@ Changelog
 3.1 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Add ``LICENSE.txt`` and ``COPYRIGHT.txt``, so they ship in the sdist.
 
 
 3.0 (2025-09-12)
