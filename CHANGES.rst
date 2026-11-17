@@ -6,6 +6,10 @@ Changelog
 
 - Add ``LICENSE.txt`` and ``COPYRIGHT.txt``, so they ship in the sdist.
 
+- Add support for Python 3.14, 3.15.
+
+- Drop support for Python 3.10, 3.9.
+
 
 3.0 (2025-09-12)
 ----------------
