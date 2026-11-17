@@ -7,6 +7,58 @@ requires = [
 ]
 build-backend = "setuptools.build_meta"
 
+
+[project]
+name = "zope.globalrequest"
+version = "3.1.dev0"
+description = "Global way of retrieving the currently active request."
+license = "ZPL-2.1"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Web Environment",
+    "Framework :: Plone",
+    "Framework :: Zope :: 3",
+    "Framework :: Zope :: 5",
+    "Framework :: Zope :: 6",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "Intended Audience :: Other Audience",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
+    "Programming Language :: Python :: Implementation :: CPython",
+]
+dynamic = ["readme"]
+requires-python = ">=3.11"
+authors = [
+    {name = "Zope Foundation and contributors",email = "zope-dev@zope.dev"},
+]
+maintainers = [
+    {name = "Plone Foundation and contributors",email = "zope-dev@zope.dev"},
+]
+dependencies = [
+    "setuptools",
+    "zope.interface",
+    "zope.publisher",
+    "zope.traversing",
+]
+keywords = ["zope", "request", "global"]
+
+[project.optional-dependencies]
+test = [
+    'zope.testrunner >= 6.4'
+]
+
+[project.urls]
+Source = "https://github.com/zopefoundation/zope.globalrequest"
+Issues = "https://github.com/zopefoundation/zope.globalrequest/issues"
+Changelog = "https://raw.githubusercontent.com/zopefoundation/zope.globalrequest/master/CHANGES.rst"
+
 [tool.coverage.run]
 branch = true
 source = ["zope.globalrequest"]
@@ -29,3 +81,7 @@ exclude_lines = [
 
 [tool.coverage.html]
 directory = "parts/htmlcov"
+
+[tool.setuptools.dynamic]
+readme = {file = ["README.rst", "CHANGES.rst"]}
+
