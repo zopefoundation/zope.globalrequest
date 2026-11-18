@@ -4,11 +4,11 @@ Changelog
 3.1 (unreleased)
 ----------------
 
+- Add support for Python 3.14, 3.15.
+
 - Move package metadata from setup.py to pyproject.toml.
 
 - Add ``LICENSE.txt`` and ``COPYRIGHT.txt``, so they ship in the sdist.
-
-- Add support for Python 3.14, 3.15.
 
 - Drop support for Python 3.10, 3.9.
 
